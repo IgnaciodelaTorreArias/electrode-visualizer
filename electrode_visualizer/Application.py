@@ -3,7 +3,7 @@ from types import NoneType
 from typing import List, Tuple
 from collections import deque
 
-from electrode_visualizer.Parser import Parser
+from Parser import Parser
 
 class NeuroVisor:
   def __init__(self) -> None:

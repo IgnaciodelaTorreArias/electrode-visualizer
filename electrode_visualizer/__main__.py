@@ -1,4 +1,4 @@
-from electrode_visualizer.Application import NeuroVisor
+from Application import NeuroVisor
 import dearpygui.dearpygui as dpg
 
 NeuroVisor()
