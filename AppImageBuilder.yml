@@ -17,7 +17,7 @@ AppDir:
     id: electrode-visualizer.app
     name: electrode-visualizer
     icon: icon
-    version: 1.0.0
+    version: 1.0.1
     exec: /usr/bin/python3.10
     exec_args: "$APPDIR/usr/src/electrode_visualizer $@"
   apt:
