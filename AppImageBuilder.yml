@@ -8,7 +8,7 @@ script:
   - mkdir -p AppDir/usr/share/icons
   # Copy the python application code into the AppDir
   - cp electrode_visualizer AppDir/usr/src -r
-  - cp icon.png AppDir/usr/share/icons -r
+  - cp assets/icon.png AppDir/usr/share/icons -r
   # Install application dependencies
   - python3.10 -m pip install --ignore-installed --prefix=/usr --root=AppDir -r ./requirements.txt
 AppDir:
