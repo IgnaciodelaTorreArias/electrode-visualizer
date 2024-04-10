@@ -1,0 +1,11 @@
+# Appimage
+AppDir/
+appimage-build/
+
+*.AppImage
+*.zsync
+
+# pyinstaller
+build/
+dist/
+*.spec
