@@ -331,8 +331,8 @@ class NeuroVisor:
       # Se separan los datos por su locación/electrodo
       for location, frequencies in self.data.hierarchy.items():
         with dpg.tree_node(label=location, default_open=True):
-          with dpg.plot(width=-1,no_menus=True, tag=location):
-            
+          with dpg.plot(width=-1, no_menus=True, anti_aliased=True, tag=location):
+            dpg.add_plot_legend()
             # Añadir tag del eje para actualizarlo al hacer zoom o desplazar el zoom
             self.time_axis.append(dpg.add_plot_axis(dpg.mvXAxis, label="segundos"))
             with dpg.plot_axis(dpg.mvYAxis, label="value"):
@@ -342,7 +342,7 @@ class NeuroVisor:
               ground: float = self.data.data[f"{location} {frequencies[0]}"].min()
               for frequency in frequencies:
                 # Añadir datos para cada frecuencia
-                dpg.add_line_series(self.data.data.index.to_list(), self.data.data[f"{location} {frequency}"].to_list())
+                dpg.add_line_series(self.data.data.index.to_list(), self.data.data[f"{location} {frequency}"].to_list(), label=frequency)
                 if self.data.data[f"{location} {frequency}"].max() > ceiling:
                   ceiling: float = self.data.data[f"{location} {frequency}"].max()
                 if self.data.data[f"{location} {frequency}"].min() < ground:
