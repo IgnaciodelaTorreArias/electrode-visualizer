@@ -30,7 +30,6 @@ python -m electrode_visualizer
   ```
 
 ### Empaquetado para Windows/linux
-__El script hace referencia a una imagen "icon.ico" que no se encuentra dentro del repositorio, puedes añadirla o modificar el script para excluirla__
 #### Descargar mediante git:
 ```
 git clone git@github.com:IgnaciodelaTorreArias/electrode-visualizer.git
@@ -46,7 +45,6 @@ Una vez te encuentres en la carpeta del código fuente y con un entorno virtual 
 Ejecuta el script "config-pyinstaller.bat"
 
 ### Construir appimage
-__En el script se hace referencia a la imagen "icon.png", esta no se incluye dentro del repositorio pero es indispensable para la construcción__
 
 Pasos:
  - Descargar codigo fuente
@@ -62,7 +60,6 @@ Pasos:
 ## Advertencias:
 
 - En windows cuando se empaqueta a un .exe, los shortcuts parecen no funcionar
-- Durante la construcción de ejecutables mediante pyinstaller/appimage se hace referencia a imágenes que no se encuentran dentro del repositorio, asegurarse de incluirlas localmente
 - Durante la construcción de la appimage depende de que el entorno de ejecución cuente con python 3.10, esto es porque se puede instalar mediante el gestor de paquetes (apt, por ejemplo), se puede modificar para utilizar pipenv, pyenv u otro gestor de versiones de python, aunque esto complicaría mucho la creación y puede que lo haga mas lento, aunque tengo poca experiencia con la creación de appimages.
 
 ## Uso
